@@ -23,13 +23,15 @@ while game_is_on:
 
     for s in state:
         if s == answer_state:
-            turtle.penup()
-            turtle.goto(x=comparing_x, y=comparing_y)
+            t = turtle.Turtle()
+            t.hideturtle()
+            t.penup()
+            t.goto(x=comparing_x, y=comparing_y)
             comparing_state = comparing.state
             for state in comparing_state:
-                turtle.write(state)
+                t.write(state)
             correct += 1
-            turtle.goto(0, 0)
+            t.goto(0, 0)
 
 
 
